@@ -268,7 +268,7 @@ local RightBox = Tabs.Misc:AddRightGroupbox('Groupbox')
 
 
 
-LeftBox:AddToggle('Trade', {Text = 'Auto Accept Trade"', Default = false,Tooltip = ''})
+LeftGroupBox:AddToggle('Trade', {Text = 'Auto Accept Trade"', Default = false,Tooltip = ''})
 Toggles.Trade:OnChanged(function(State)
     Trade = Toggles.Trade.Value
     spawn(function()
