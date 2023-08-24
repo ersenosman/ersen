@@ -512,26 +512,18 @@ local Window = Library:CreateWindow({
 
 local Tabs = {
     Main = Window:AddTab('Main'), 
-    Misc = Window:AddTab("Misc"),
-    Events = Window:AddTab("Events"),
-    ['UI Settings'] = Window:AddTab('UI Settings'),
-}
+   }
 
-local LeftGroupBox = Tabs.Main:AddLeftGroupbox('AutoFarms')
-local LeftGroupBox2 = Tabs.Main:AddLeftGroupbox("Quick Helper")
-local RightGroupBox = Tabs.Main:AddRightGroupbox('Quick Misc')
-local RightGroupBox2 = Tabs.Main:AddRightGroupbox("Teleports")
+
+local LeftGroupBox = Tabs.Main:AddLeftGroupbox("Quick Helper")
+
 
 local LeftBox = Tabs.Misc:AddLeftGroupbox('Groupbox')
 local RightBox = Tabs.Misc:AddRightGroupbox('Groupbox')
 
-local LeftEventGroupBox = Tabs.Events:AddLeftGroupbox('AutoFarms')
-
-local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
 
 
-
-LeftGroupBox2:AddToggle('Trade', {Text = 'Auto Accept Trade"', Default = false,Tooltip = ''})
+LeftGroupBox:AddToggle('Trade', {Text = 'Auto Accept Trade"', Default = false,Tooltip = ''})
 Toggles.Trade:OnChanged(function(State)
     Trade = Toggles.Trade.Value
     spawn(function()
