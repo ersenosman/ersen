@@ -259,7 +259,7 @@ local Tabs = {
     Main = Window:AddTab('Main'), 
    }
 
-
+local LeftBox = Tabs.Misc:AddLeftGroupbox('Groupbox')
 local LeftGroupBox = Tabs.Main:AddLeftGroupbox("Quick Helper")
 
 
